@@ -12,8 +12,12 @@ hand = {
     '5' : '5',
     '6' : '6',
     '7' : 'シゴロ',
-    '8' : 'アラシ',
-    '9' : 'ピンゾロ'
+    '8' : 'アラシ(2)',
+    '9' : 'アラシ(3)',
+    '10': 'アラシ(4)',
+    '11': 'アラシ(5)',
+    '12': 'アラシ(6)',
+    '13':'ピンゾロ'
 }
 
 def main():
@@ -44,10 +48,10 @@ def check(dices:list[int])->int:
     
     if dices[0] == dices[1] and dices[1] == dices[2]:
         if dices[0] == '1':
-            return -1
+            return 13
         else:
             # アラシ
-            return 8 
+            return 6+dices[0] 
     elif dices == 4 and dices == 5 and dices == 6:
         # シゴロ
         return 7
